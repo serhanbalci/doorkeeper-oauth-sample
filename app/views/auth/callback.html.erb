@@ -1,0 +1,9 @@
+
+<%= form_tag '/auth/auth_server/do_callback', method: "POST" do %>
+	<%= hidden_field_tag 'code', @code %>
+	<%= text_field_tag 'app_id', nil, placeholder: 'Enter app id...' %>
+	<%= text_field_tag 'secret', nil, placeholder: 'Enter secret...' %>
+	<%= text_field_tag 'callback_url', nil, placeholder: 'Enter callback url...' %>
+	<%= text_field_tag 'site', nil, placeholder: 'Enter site url...' %>
+	<%= submit_tag "Get Access Token" %>
+<% end %>
